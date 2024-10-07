@@ -1,0 +1,191 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Afacad Flux", sans-serif;
+}
+
+body{
+    background-image: linear-gradient(100deg, #001214, #001f29);
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10%;
+}
+
+#header h1{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 5rem;
+    font-family: "Updock", cursive;    
+    min-height: 25vh;
+    width: 100%;
+    color: white;
+}
+
+form {
+    display: flex;
+    font-size: 1.7rem;
+    justify-content: center;
+    margin: 15px 0;
+    padding: 0.8rem;
+    width: 100%;
+    height: 80px;
+}
+
+#form input {
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
+    min-width: 800px;
+    max-width: 1200px;
+    transition: background-color 200ms ease-in-out;
+    width: 100%;
+    background-color: #01394c;
+    color: white;
+}
+
+#form input::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+#form input:hover {
+    background-color: #013141;
+}
+
+#form button {
+    border: none;
+    outline: none; 
+    transition: box-shadow 200ms ease, background-color 200ms ease-in-out;
+    background-color: #002837;
+    color: white;
+    padding: 10px;
+    font-size: 17px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    min-width: 100px;
+}
+
+#form button:hover {
+    cursor: pointer;
+    background-color: #001f29;
+}
+
+#myUnOrdList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.todo-list {
+    min-width: 25%;
+    list-style: none;
+}
+
+.todo {
+    margin: 1rem;
+    background-color: #01394c;
+    font-size: 19px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25em 0.5em;
+    border-radius: 30px;
+    transition: background-color 200ms ease-in-out;
+}
+
+.todo li{
+    padding: 7px;
+    font-size: 20px;
+    flex: 1;
+    border-radius: 30px;
+    color: white;
+    max-width: 500px;
+    overflow-wrap: anywhere;
+}
+
+.check-btn, .delete-btn {
+    font-size: 19px;
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    border-radius: 80%;
+    margin: 0 5px;
+    background-color: #002837;
+    color: white;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check { 
+    pointer-events: none;
+}
+
+.completed {
+    transition: 0.2s;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transition: 0.5s;
+    transform: translateY(45rem) rotateZ(45deg);
+    opacity: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        padding-top: 10%;
+    }
+
+    #header h1 {
+        font-size: 5rem;
+    }
+
+    #form input {
+        padding: 12px;
+        font-size: 18px;
+        min-width: 300px;
+        width: 100%;
+    }
+
+    #form button {
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    .todo {
+        flex-direction: row;
+        padding: 1rem;
+        font-size: 18px;
+        justify-content: space-between;
+        height: 45px;
+        margin-right: 50px;
+    }
+
+    .todo li {
+        flex: 1;
+        padding: 7px;
+        font-size: 18px;
+        max-width: 260px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .todo-list {
+        width: 100%;
+    }
+}
