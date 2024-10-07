@@ -157,13 +157,14 @@ form {
     #form input {
         padding: 12px;
         font-size: 18px;
-        min-width: 300px;
+        min-width: 200px;
         width: 100%;
     }
 
     #form button {
         padding: 12px;
         font-size: 18px;
+        max-width: 30px;
     }
 
     .todo {
